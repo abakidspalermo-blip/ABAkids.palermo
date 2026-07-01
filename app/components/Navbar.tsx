@@ -9,10 +9,10 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="ABAkids"
-            width={55}
-            height={55}
+            width={48}
+            height={48}
           />
-          <span className="text-2xl font-bold text-pink-600">
+          <span className="text-xl md:text-2xl font-bold text-pink-600">
             ABAkids
           </span>
         </div>
@@ -24,7 +24,7 @@ export default function Navbar() {
           <a href="#contatti">Contatti</a>
         </nav>
 
-        <button className="hidden md:block bg-pink-500 hover:bg-pink-600 text-white px-5 py-3 rounded-full shadow-lg transition"
+        <button className="hidden md:block bg-pink-500 hover:bg-pink-600 text-white px-5 py-3 rounded-full shadow-lg transition">
           Prenota una consulenza
         </button>
 
