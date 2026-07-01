@@ -37,8 +37,8 @@ export default function RootLayout({
   {children}
 
   <Script
-    async
     src="https://www.googletagmanager.com/gtag/js?id=G-J0TDV5BE25"
+   strategy="afterInteractive"
   />
 
   <Script id="google-analytics" strategy="afterInteractive">
