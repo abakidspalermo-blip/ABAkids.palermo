@@ -1,6 +1,6 @@
 export default function CallToAction() {
   return (
-    <section className="py-24 bg-gradient-to-r from-pink-300 to-violet-200">
+    <section id="contatti" className="py-24 bg-gradient-to-r from-pink-300 to-violet-200">
       <div className="max-w-5xl mx-auto px-6 text-center text-white">
 
         <h2 className="text-4xl md:text-5xl font-bold mb-6">

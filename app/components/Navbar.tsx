@@ -19,9 +19,9 @@ export default function Navbar() {
 
         <nav className="hidden md:flex gap-8 text-gray-700 font-medium">
           <a href="#">Home</a>
-          <a href="#servizi">Servizi</a>
-          <a href="#chisono">Chi siamo</a>
-          <a href="#contatti">Contatti</a>
+          <a href="#servizi">servizi</a>
+          <a href="#chi-siamo">chi siamo</a>
+          <a href="#contatti">contatti</a>
         </nav>
 
         <button className="hidden md:block bg-pink-500 hover:bg-pink-600 text-white px-5 py-3 rounded-full shadow-lg transition">

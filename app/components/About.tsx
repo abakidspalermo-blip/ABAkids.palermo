@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="py-24 bg-gradient-to-r from-pink-50 to-white">
+    <section id="chi-siamo" className="py-24 bg-gradient-to-r from-pink-50 to-white">
   <div className="max-w-6xl mx-auto px-6">
 
     <div className="grid md:grid-cols-2 gap-16 items-center">
