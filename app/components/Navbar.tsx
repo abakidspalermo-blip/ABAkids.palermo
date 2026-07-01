@@ -26,7 +26,7 @@ export default function Navbar() {
 
         <button className="hidden md:block bg-pink-500 hover:bg-pink-600 text-white px-5 py-3 rounded-full shadow-lg transition"
           Prenota una consulenza
-        </button>/button>
+        </button>
 
       </div>
     </header>
