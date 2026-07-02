@@ -19,7 +19,8 @@ export default function Services() {
         "Parent Training",
         "Terapia di gruppo",
         "Supervisione BCBA"
-      ]
+      ],
+            showIntro: true,
     },
     {
       icon: "🗣️",
@@ -128,21 +129,46 @@ export default function Services() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          {services.map((service) => (
+          {services.map((service, index) => {
+  const backgrounds = [
+    "bg-pink-soft",
+    "bg-sky-soft",
+    "bg-yellow-soft",
+    "bg-purple-soft",
+  ];
+  const borders = [
+  "border-t-4 border-pink-400",
+  "border-t-4 border-sky-400",
+  "border-t-4 border-yellow-400",
+  "border-t-4 border-violet-400",
+];
+const titleColors = [
+  "text-pink-600",
+  "text-sky-600",
+  "text-yellow-600",
+  "text-violet-600",
+];
+  return (
 
             <div
-              key={service.title}
-              onClick={() => {
-  console.log("CLICK", service.title);
-  setSelectedService(service);
-}}
-              className="cursor-pointer bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
-            >
+  key={service.title}
+  onClick={() => {
+    console.log("CLICK", service.title);
+    setSelectedService(service);
+  }}
+  className={`cursor-pointer
+${backgrounds[index % 4]}
+${borders[index % 4]}
+card-hover
+rounded-3xl
+p-8
+overflow-hidden`}
+>
               <div className="text-5xl mb-5">
                 {service.icon}
               </div>
 
-              <h3 className="text-2xl font-bold text-pink-600 mb-4">
+              <h3 className={`text-2xl font-bold ${titleColors[index % 4]} mb-4`}>
                 {service.title}
               </h3>
 
@@ -151,19 +177,22 @@ export default function Services() {
               </p>
             </div>
 
-          ))}
+          );
+
+            })}
 
         </div>
 
       </div>
 
       <ServiceModal
-        open={selectedService !== null}
-        onClose={() => setSelectedService(null)}
-        title={selectedService?.title || ""}
-        description={selectedService?.text || ""}
-        items={selectedService?.items || []}
-      />
+  open={selectedService !== null}
+  onClose={() => setSelectedService(null)}
+  title={selectedService?.title || ""}
+  description={selectedService?.text || ""}
+  items={selectedService?.items || []}
+  showIntro={selectedService?.showIntro}
+/>
 
     </section>
   );

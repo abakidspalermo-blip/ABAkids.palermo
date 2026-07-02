@@ -157,3 +157,14 @@ background:#38bdf8;
 .animate-float {
   animation: float 5s ease-in-out infinite;
 }
+.gradient-title {
+  background: linear-gradient(
+    90deg,
+    #ec4899 0%,
+    #c084fc 45%,
+    #38bdf8 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

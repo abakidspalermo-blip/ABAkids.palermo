@@ -6,6 +6,7 @@ type ServiceModalProps = {
   title: string;
   description: string;
   items: string[];
+  showIntro?: boolean;
 };
 
 export default function ServiceModal({
@@ -14,6 +15,7 @@ export default function ServiceModal({
   title,
   description,
   items,
+  showIntro,
 }: ServiceModalProps) {
   console.log(open);
   if (!open) return null;
@@ -55,26 +57,30 @@ export default function ServiceModal({
           ))}
         </ul>
 
-        <div className="bg-pink-50 rounded-2xl p-5 mb-6">
-          <h4 className="font-bold text-pink-600 mb-2">
-            💗 Come iniziare?
-          </h4>
+       {showIntro && (
+  <div className="bg-pink-50 rounded-2xl p-5 mb-6">
+    <h4 className="font-bold text-pink-600 mb-2">
+      💗 Come iniziare?
+    </h4>
 
-          <p className="text-gray-700">
-            Ogni percorso ABAKids inizia con un colloquio
-            conoscitivo durante il quale ascoltiamo la famiglia,
-            analizziamo i bisogni del bambino e definiamo insieme
-            gli obiettivi dell'intervento.
-          </p>
-        </div>
+    <p className="text-gray-700">
+      Ogni percorso ABAKids inizia con un colloquio conoscitivo
+      durante il quale ascoltiamo la famiglia, analizziamo i bisogni
+      del bambino e definiamo insieme gli obiettivi dell'intervento.
+    </p>
+  </div>
+)}
 
         <a
-          href="https://wa.me/393505436111?text=Ciao%20ABAKids,%20vorrei%20ricevere%20informazioni."
-          target="_blank"
-          className="block text-center bg-pink-500 hover:bg-pink-600 text-white py-4 rounded-full font-semibold transition"
-        >
-          📲 Richiedi informazioni su WhatsApp
-        </a>
+  href={`https://wa.me/393505436111?text=${encodeURIComponent(
+    `Ciao ABAKids, vorrei ricevere informazioni sul servizio "${title}".`
+  )}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block text-center bg-pink-500 hover:bg-pink-600 text-white py-4 rounded-full font-semibold transition"
+>
+  📲 Richiedi informazioni su {title}
+</a>
       </div>
     </div>
   );

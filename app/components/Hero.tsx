@@ -3,19 +3,6 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pastel-bg py-20">
-       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-
-  <div className="absolute top-10 left-10 w-24 h-24 bg-pink-200/40 rounded-full animate-pulse blur-sm"></div>
-
-  <div className="absolute top-40 right-20 w-32 h-32 bg-sky-200/40 rounded-full animate-bounce blur-sm"></div>
-
-  <div className="absolute bottom-24 left-1/3 w-20 h-20 bg-yellow-200/40 rounded-full animate-pulse blur-sm"></div>
-
-  <div className="absolute bottom-16 right-1/4 w-28 h-28 bg-violet-200/40 rounded-full animate-pulse blur-sm"></div>
-
-  <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-pink-100/50 rounded-full animate-bounce blur-sm"></div>
-
-</div> 
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -28,7 +15,7 @@ export default function Hero() {
               Centro Cognitivo-Comportamentale
             </span>
 
-            <h1 className="text-5xl lg:text-6xl font-extrabold title-gradient leading-tight mb-6">
+            <h1 className="text-5xl lg:text-6xl font-extrabold gradient-title leading-tight mb-6">
               ABAKids
             </h1>
 
