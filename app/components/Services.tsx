@@ -1,49 +1,116 @@
+"use client";
+
+import { useState } from "react";
+import ServiceModal from "./ServiceModal";
+
 export default function Services() {
+  const [selectedService, setSelectedService] = useState<any>(null);
+
   const services = [
     {
       icon: "🧩",
       title: "Terapia Comportamentale ABA",
-      text: "Interventi personalizzati basati sull'Analisi del Comportamento Applicata."
+      text: "Interventi personalizzati basati sull'Analisi del Comportamento Applicata.",
+      items: [
+        "Valutazione iniziale",
+        "Programmi individualizzati",
+        "Intervento domiciliare",
+        "Intervento scolastico",
+        "Parent Training",
+        "Terapia di gruppo",
+        "Supervisione BCBA"
+      ]
     },
     {
       icon: "🗣️",
       title: "Logopedia",
-      text: "Percorsi dedicati allo sviluppo della comunicazione e del linguaggio."
+      text: "Percorsi dedicati allo sviluppo della comunicazione e del linguaggio.",
+      items: [
+        "Valutazione logopedica",
+        "Linguaggio",
+        "Comunicazione",
+        "Deglutizione",
+        "Supporto ai genitori"
+      ]
     },
     {
       icon: "🤸",
       title: "Neuropsicomotricità",
-      text: "Attività finalizzate allo sviluppo motorio, cognitivo e relazionale."
+      text: "Attività finalizzate allo sviluppo motorio, cognitivo e relazionale.",
+      items: [
+        "Motricità",
+        "Coordinazione",
+        "Gioco",
+        "Autonomie",
+        "Percorsi individualizzati"
+      ]
     },
     {
       icon: "🦿",
       title: "Fisioterapia",
-      text: "Percorsi riabilitativi per migliorare il movimento e l'autonomia."
+      text: "Percorsi riabilitativi per migliorare il movimento e l'autonomia.",
+      items: [
+        "Valutazione",
+        "Riabilitazione",
+        "Mobilità",
+        "Postura",
+        "Autonomia"
+      ]
     },
     {
       icon: "🧠",
       title: "Supporto Psicologico",
-      text: "Sostegno psicologico per bambini, ragazzi e famiglie."
+      text: "Sostegno psicologico per bambini, ragazzi e famiglie.",
+      items: [
+        "Colloqui clinici",
+        "Supporto emotivo",
+        "Consulenza familiare",
+        "Gestione comportamentale"
+      ]
     },
     {
       icon: "👨‍👩‍👧‍👦",
       title: "Parent Training",
-      text: "Coinvolgimento attivo della famiglia durante tutto il percorso."
+      text: "Coinvolgimento attivo della famiglia durante tutto il percorso.",
+      items: [
+        "Incontri con i genitori",
+        "Strategie educative",
+        "Gestione delle difficoltà",
+        "Supporto continuo"
+      ]
     },
     {
       icon: "🎨",
       title: "Laboratori Creativi",
-      text: "Attività inclusive per favorire socializzazione ed espressione."
+      text: "Attività inclusive per favorire socializzazione ed espressione.",
+      items: [
+        "Arte",
+        "Musica",
+        "Manipolazione",
+        "Attività di gruppo"
+      ]
     },
     {
       icon: "📚",
       title: "Potenziamento Cognitivo",
-      text: "Interventi per sviluppare attenzione, memoria e apprendimento."
+      text: "Interventi per sviluppare attenzione, memoria e apprendimento.",
+      items: [
+        "Attenzione",
+        "Memoria",
+        "Metodo di studio",
+        "Apprendimento"
+      ]
     },
     {
       icon: "🏡",
       title: "Autonomie Personali",
-      text: "Percorsi per incrementare indipendenza e qualità della vita."
+      text: "Percorsi per incrementare indipendenza e qualità della vita.",
+      items: [
+        "Igiene personale",
+        "Alimentazione",
+        "Organizzazione",
+        "Autonomia domestica"
+      ]
     }
   ];
 
@@ -65,9 +132,9 @@ export default function Services() {
 
             <div
               key={service.title}
-              className="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
+              onClick={() => setSelectedService(service)}
+              className="cursor-pointer bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
             >
-
               <div className="text-5xl mb-5">
                 {service.icon}
               </div>
@@ -79,7 +146,6 @@ export default function Services() {
               <p className="text-gray-600 leading-7">
                 {service.text}
               </p>
-
             </div>
 
           ))}
@@ -87,6 +153,15 @@ export default function Services() {
         </div>
 
       </div>
+
+      <ServiceModal
+        open={selectedService !== null}
+        onClose={() => setSelectedService(null)}
+        title={selectedService?.title || ""}
+        description={selectedService?.text || ""}
+        items={selectedService?.items || []}
+      />
+
     </section>
   );
 }
