@@ -15,6 +15,7 @@ export default function ServiceModal({
   description,
   items,
 }: ServiceModalProps) {
+  console.log(open);
   if (!open) return null;
 
   return (

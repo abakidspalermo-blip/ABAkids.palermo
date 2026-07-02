@@ -2,7 +2,20 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-b from-pink-50 via-violet-50 py-20">
+    <section className="relative overflow-hidden pastel-bg py-20">
+       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+
+  <div className="absolute top-10 left-10 w-24 h-24 bg-pink-200/40 rounded-full animate-pulse blur-sm"></div>
+
+  <div className="absolute top-40 right-20 w-32 h-32 bg-sky-200/40 rounded-full animate-bounce blur-sm"></div>
+
+  <div className="absolute bottom-24 left-1/3 w-20 h-20 bg-yellow-200/40 rounded-full animate-pulse blur-sm"></div>
+
+  <div className="absolute bottom-16 right-1/4 w-28 h-28 bg-violet-200/40 rounded-full animate-pulse blur-sm"></div>
+
+  <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-pink-100/50 rounded-full animate-bounce blur-sm"></div>
+
+</div> 
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -15,11 +28,11 @@ export default function Hero() {
               Centro Cognitivo-Comportamentale
             </span>
 
-            <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+            <h1 className="text-5xl lg:text-6xl font-extrabold title-gradient leading-tight mb-6">
               ABAKids
             </h1>
 
-            <h2 className="text-2xl lg:text-3xl font-semibold text-pink-600 mb-6">
+            <h2 className="text-2xl lg:text-3xl font-semibold text-sky-600 mb-6">
               Riabilitazione, Promozione Sociale e Supporto Educativo
             </h2>
 
@@ -35,14 +48,14 @@ export default function Hero() {
   href="https://wa.me/393505436111?text=Ciao%20ABAKids,%20vorrei%20ricevere%20informazioni%20sui%20vostri%20servizi."
   target="_blank"
   rel="noopener noreferrer"
-  className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl active:scale-95"
+  className="btn-primary"
 >
   💬 Prenota una consulenza
 </a>
 
               <a
                 href="#servizi"
-                className="border-2 border-pink-600 text-pink-600 hover:bg-pink-50 px-8 py-4 rounded-full font-semibold transition"
+                className="btn-secondary"
               >
                 Scopri i servizi
               </a>
@@ -61,7 +74,7 @@ export default function Hero() {
               width={450}
               height={450}
               priority
-              className="w-72 md:w-96 lg:w-[450px] h-auto drop-shadow-2xl transition-transform duration-500 hover:scale-105"
+              className="w-64 md:w-80 lg:w-[420px] h-auto drop-shadow-2xl animate-float"
             />
 
           </div>

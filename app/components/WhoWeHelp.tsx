@@ -14,7 +14,7 @@ export default function WhoWeHelp() {
 
         <div className="grid md:grid-cols-3 gap-8">
 
-          <div className="bg-pink-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition text-center">
+          <div className="bg-sky-soft card-hover rounded-3x1 p-8 shadow-lg hover:shadow-xl transition text-center">
             <div className="text-5xl mb-5">🧸</div>
 
             <h3 className="text-2xl font-bold text-pink-600 mb-4">
@@ -27,7 +27,7 @@ export default function WhoWeHelp() {
             </p>
           </div>
 
-          <div className="bg-pink-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition text-center">
+          <div className="bg-yellow-soft card-hover rounded-3x1 p-8 shadow-lg hover:shadow-xl transition text-center">
             <div className="text-5xl mb-5">🎒</div>
 
             <h3 className="text-2xl font-bold text-pink-600 mb-4">
@@ -40,7 +40,7 @@ export default function WhoWeHelp() {
             </p>
           </div>
 
-          <div className="bg-pink-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition text-center">
+          <div className="bg-purple-soft card-hover rounded-3x1 p-8 shadow-lg hover:shadow-xl transition text-center">
             <div className="text-5xl mb-5">🌱</div>
 
             <h3 className="text-2xl font-bold text-pink-600 mb-4">

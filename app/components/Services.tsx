@@ -132,7 +132,10 @@ export default function Services() {
 
             <div
               key={service.title}
-              onClick={() => setSelectedService(service)}
+              onClick={() => {
+  console.log("CLICK", service.title);
+  setSelectedService(service);
+}}
               className="cursor-pointer bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
             >
               <div className="text-5xl mb-5">
