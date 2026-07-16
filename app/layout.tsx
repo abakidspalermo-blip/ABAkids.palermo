@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
  return (
   <html
-    lang="en"
+    lang="it"
     className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
   >
     <body className="min-h-screen flex flex-col">
@@ -46,7 +46,7 @@ export default function RootLayout({
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-JQTDVSEB2S');
+      gtag('config', 'G-J0TDV5BE25');
     `}
   </Script>
 </body>
