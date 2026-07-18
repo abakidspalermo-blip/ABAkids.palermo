@@ -17,7 +17,12 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "ABAkids Palermo",
   description: "Centro ABA a Palermo",
-  verification: {
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+    },
+    verification: {
     google: "srJG8R-c00KxEJ0BN2K17eTsmvhRsBUm-i7Qr5KiHkk",
   },
 };
