@@ -4,15 +4,15 @@ import Image from "next/image";
 import { useState } from "react";
 
 const images = [
-  "/images/centro1.jpg",
-  "/images/centro2.jpg",
-  "/images/centro3.jpg",
-  "/images/centro4.jpg",
-  "/images/centro5.jpg",
-  "/images/centro6.jpg",
-  "/images/centro7.jpg",
-  "/images/centro8.jpg",
-  "/images/centro9.jpg",
+  "/images/centro1.jpeg",
+  "/images/centro2.jpeg",
+  "/images/centro3.jpeg",
+  "/images/centro4.jpeg",
+  "/images/centro5.jpeg",
+  "/images/centro6.jpeg",
+  "/images/centro7.jpeg",
+  "/images/centro8.jpeg",
+  "/images/centro9.jpeg",
 ];
 
 export default function Gallery() {
