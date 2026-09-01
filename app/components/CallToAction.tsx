@@ -9,7 +9,7 @@ export default function CallToAction() {
 
         <p className="text-lg md:text-xl text-pink-100 max-w-3xl mx-auto mb-10">
           Se desideri maggiori informazioni o vuoi prenotare un primo colloquio,
-          sarò felice di ascoltare la tua situazione e costruire insieme il
+          sarò felice di ascoltarti e costruire insieme il
           percorso più adatto alle esigenze della tua famiglia.
         </p>
 
