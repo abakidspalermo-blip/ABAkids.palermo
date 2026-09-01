@@ -20,7 +20,7 @@ export default function Services() {
         "Terapia di gruppo",
         "Supervisione BCBA"
       ],
-            showIntro: true,
+      showIntro: true,
     },
     {
       icon: "🗣️",
@@ -81,6 +81,32 @@ export default function Services() {
       ]
     },
     {
+      icon: "🎵",
+      title: "Musicoterapia",
+      text: "Percorsi che utilizzano la musica come strumento di comunicazione, espressione e relazione.",
+      items: [
+        "Percorsi individualizzati",
+        "Espressione attraverso la musica",
+        "Comunicazione e relazione",
+        "Sviluppo delle competenze",
+        "Attività musicali",
+        "Percorsi di gruppo"
+      ]
+    },
+    {
+      icon: "📖",
+      title: "Pedagogia",
+      text: "Interventi educativi personalizzati per sostenere lo sviluppo, l'apprendimento e le autonomie.",
+      items: [
+        "Consulenza pedagogica",
+        "Supporto educativo",
+        "Potenziamento delle autonomie",
+        "Supporto all'apprendimento",
+        "Strategie educative",
+        "Supporto alle famiglie"
+      ]
+    },
+    {
       icon: "🎨",
       title: "Laboratori Creativi",
       text: "Attività inclusive per favorire socializzazione ed espressione.",
@@ -130,69 +156,73 @@ export default function Services() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {services.map((service, index) => {
-  const backgrounds = [
-    "bg-pink-soft",
-    "bg-sky-soft",
-    "bg-yellow-soft",
-    "bg-purple-soft",
-  ];
-  const borders = [
-  "border-t-4 border-pink-400",
-  "border-t-4 border-sky-400",
-  "border-t-4 border-yellow-400",
-  "border-t-4 border-violet-400",
-];
-const titleColors = [
-  "text-pink-600",
-  "text-sky-600",
-  "text-yellow-600",
-  "text-violet-600",
-];
-  return (
+            const backgrounds = [
+              "bg-pink-soft",
+              "bg-sky-soft",
+              "bg-yellow-soft",
+              "bg-purple-soft",
+            ];
 
-            <div
-  key={service.title}
-  onClick={() => {
-    console.log("CLICK", service.title);
-    setSelectedService(service);
-  }}
-  className={`cursor-pointer
-${backgrounds[index % 4]}
-${borders[index % 4]}
-card-hover
-rounded-3xl
-p-8
-overflow-hidden`}
->
-              <div className="text-5xl mb-5">
-                {service.icon}
+            const borders = [
+              "border-t-4 border-pink-400",
+              "border-t-4 border-sky-400",
+              "border-t-4 border-yellow-400",
+              "border-t-4 border-violet-400",
+            ];
+
+            const titleColors = [
+              "text-pink-600",
+              "text-sky-600",
+              "text-yellow-600",
+              "text-violet-600",
+            ];
+
+            return (
+              <div
+                key={service.title}
+                onClick={() => {
+                  console.log("CLICK", service.title);
+                  setSelectedService(service);
+                }}
+                className={`cursor-pointer
+                  ${backgrounds[index % 4]}
+                  ${borders[index % 4]}
+                  card-hover
+                  rounded-3xl
+                  p-8
+                  overflow-hidden`}
+              >
+                <div className="text-5xl mb-5">
+                  {service.icon}
+                </div>
+
+                <h3
+                  className={`text-2xl font-bold ${
+                    titleColors[index % 4]
+                  } mb-4`}
+                >
+                  {service.title}
+                </h3>
+
+                <p className="text-gray-600 leading-7">
+                  {service.text}
+                </p>
               </div>
-
-              <h3 className={`text-2xl font-bold ${titleColors[index % 4]} mb-4`}>
-                {service.title}
-              </h3>
-
-              <p className="text-gray-600 leading-7">
-                {service.text}
-              </p>
-            </div>
-
-          );
-
-            })}
+            );
+          })}
 
         </div>
 
       </div>
 
       <ServiceModal
-  open={selectedService !== null}
-  onClose={() => setSelectedService(null)}
-  title={selectedService?.title || ""}
-  description={selectedService?.text || ""}
-  items={selectedService?.items || []}
-  showIntro={selectedService?.showIntro}
-/>
+        open={selectedService !== null}
+        onClose={() => setSelectedService(null)}
+        title={selectedService?.title || ""}
+        description={selectedService?.text || ""}
+        items={selectedService?.items || []}
+        showIntro={selectedService?.showIntro}
+      />
 
     </section>
   );

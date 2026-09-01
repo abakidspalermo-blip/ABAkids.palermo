@@ -12,7 +12,7 @@ export default function Hero() {
           <div>
 
             <span className="inline-block bg-pink-100 text-pink-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Centro Cognitivo-Comportamentale
+              Studio Cognitivo-Comportamentale
             </span>
 
             <h1 className="text-5xl lg:text-6xl font-extrabold gradient-title leading-tight mb-6">
@@ -37,7 +37,7 @@ export default function Hero() {
   rel="noopener noreferrer"
   className="btn-primary"
 >
-  💬 Prenota una consulenza
+  💬 Prenota una consulenza gratuita
 </a>
 
               <a

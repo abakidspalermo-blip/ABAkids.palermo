@@ -20,7 +20,7 @@ export default function Footer() {
             />
 
             <p className="text-slate-300 leading-7">
-              Centro Cognitivo-Comportamentale di Riabilitazione,
+              Studio Cognitivo-Comportamentale multidisciplinare di Riabilitazione,
               Promozione Sociale e Supporto Educativo.
             </p>
           </div>

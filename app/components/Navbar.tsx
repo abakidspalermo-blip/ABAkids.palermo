@@ -76,7 +76,7 @@ export default function Navbar() {
               target="_blank"
               className="bg-pink-500 text-white text-center py-3 rounded-full"
             >
-              Prenota una consulenza
+              Prenota una consulenza gratuita
             </a>
 
           </nav>
