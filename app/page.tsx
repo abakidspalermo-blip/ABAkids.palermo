@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Map from "./components/Map";
 import Gallery from "./components/Gallery";
+import FirstConsultation from "./components/FirstConsultation";
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-sky-50">
@@ -16,6 +17,8 @@ export default function Home() {
       <Hero />
 
       <Services />
+
+      <FirstConsultation />
 
       <WhoWeHelp />
 
