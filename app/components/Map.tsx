@@ -8,7 +8,7 @@ export default function Map() {
         </h2>
 
         <p className="text-center text-gray-600 mb-14">
-          Saremo felici di accoglierti presso il nostro centro.
+          Saremo felici di accoglierti presso il nostro studio.
         </p>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
